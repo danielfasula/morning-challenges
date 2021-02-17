@@ -39,6 +39,8 @@ longestWord("What is the longgest word in this sentence")
 
 
 //Write a function that will take in one argument, a string. Determine if the given string is a palindrome, and return either true or false. (A palindrome is a word that's spelled the same both forward and backward.
+
+// another one liner boiiiiiii
 function isPalindrome(str) {
     return str.split("").reverse().join('') == str ? true : false
 }
