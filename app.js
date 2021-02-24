@@ -52,3 +52,46 @@ isPalindrome('hello')
 isPalindrome('aibohphobia')
 //returns true
 
+
+// Write a function that takes in a single str and return the most frequently occurring letter within that string
+
+function mostCommonLetter(str) {
+
+    //iterate through the array after alphabetized, and find the letter that has the most occurences
+    let characters = str.split('')
+    let dict = {}
+    let greatest = {
+        letter: '',
+        value: 0
+    }
+    characters.forEach(c => {
+        if (!dict[c]) {
+            dict[c] = 0
+        }
+        dict[c]++
+        if (dict[c] > greatest.value) {
+            greatest.value = dict[c]
+            greatest.letter = c
+        }
+    })
+    console.log(greatest)
+}
+
+mostCommonLetter("hello")
+
+
+//  Create a function that takes a number as its argument and returns an array of all its factors.
+
+function factorize(n) {
+    let factors = []
+    for (let i = 0; i <= n; i++) {
+        if (n % i == 0) {
+            factors.push(i)
+        }
+    } console.log(factors);
+    if (factors.length == 0) {
+        console.log("no factors!");
+    }
+}
+
+factorize(25)
