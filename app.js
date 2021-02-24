@@ -84,14 +84,16 @@ mostCommonLetter("hello")
 
 function factorize(n) {
     let factors = []
-    for (let i = 0; i <= n; i++) {
-        if (n % i == 0) {
-            factors.push(i)
-        }
-    } console.log(factors);
-    if (factors.length == 0) {
-        console.log("no factors!");
-    }
+    for (let i = 0; i <= n; i++) n % i == 0 ? factors.push(i) : ''; console.log(factors);
 }
+//     for (let i = 0; i <= n; i++) {
+//         if (n % i == 0) {
+//             factors.push(i)
+//         }
+//     } console.log(factors);
+//     if (factors.length == 2) {
+//         console.log("Prime number");
+//     }
+// }
 
-factorize(25)
+factorize(30)
