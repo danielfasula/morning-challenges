@@ -103,11 +103,13 @@ factorize(30)
 
 // divide min by 60, assign to hours, whatever is left over, assign to minutes
 
+// one liner
 function timeConvert(min) {
-    let convertedTime = { hours: 0, mins: 0 }
-    convertedTime.hours = Math.floor((min / 60))
-    convertedTime.mins = min % 60
-    console.log(convertedTime.hours + ':' + convertedTime.mins);
+    console.log(Math.floor(min / 60) + ':' + min % 60)
+    // let hours = 0, mins = 0
+    // hours = Math.floor((min / 60))
+    // mins = min % 60
+    // console.log(hours + ':' + mins);
 }
 
 timeConvert(63)
