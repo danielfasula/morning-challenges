@@ -116,3 +116,51 @@ timeConvert(63)
 timeConvert(55)
 timeConvert(120)
 timeConvert(255)
+
+
+// Hobbits - 1, Men - 2, Elves - 3, Dwarves - 3, Eagles - 4, Wizards - 10
+// Orcs - 1, Men - 2,    Wargs - 2,  Goblins - 2, Uruk Hai - 3, Trolls - 5, Wizards - 10
+// Hobbits, Men, Elves, Dwarves, Eagles, Wizards.   
+// Orcs, Men, Wargs, Goblins, Uruk Hai, Trolls, Wizards.
+var goodValues = [1, 2, 3, 3, 4, 10]
+var evilValues = [1, 2, 2, 2, 3, 5, 10]
+
+var testGood = '1 1 1 2 1 0'
+var testEvil = '2 0 1 0 1 0 1'
+
+function battleForMiddleEarth(good, bad) {
+
+    let getWorth = function (side, worth) {
+        return side.split(' ').reduce((result, value, index) => {
+            return result + worth[index] * value
+        }, 0)
+    }
+    let result = getWorth(good, goodValues) - getWorth(bad, evilValues)
+
+    return result > 0 ? console.log("Battle Result: Good triumphs over Evil") : result < 0 ? console.log("Battle Result: Evil eradicates all trace of Good") : console.log("Battle Result: No victor on this battle field")
+
+    // let goodArmy = 0
+    // let badArmy = 0
+
+    // good.split(',')
+    // goodArmy += (good[0] * 1) + (good[1] * 2) + (good[2] * 3) + (good[3] * 3) + (good[4] * 4) + (good[5] * 10)
+    // bad.split(',')
+    // badArmy += (bad[0] * 1) + (bad[1] * 2) + (bad[2] * 2) + (bad[3] * 2) + (bad[4] * 3) + (bad[5] * 5) + (bad[6] * 10)
+
+
+    // goodArmy > badArmy ? console.log("Battle Result: Good triumphs over Evil") : badArmy > goodArmy ? console.log("Battle Result: Evil eradicates all trace of Good") : console.log("Battle Result: No victor on this battle field")
+}
+
+battleForMiddleEarth('1 1 1 1 1 1', '5 5 5 5 5 5 5')
+
+//EX: 10, 20, 29 --> true
+//EX: 10, 20, 31 --> false
+//EX: 31, 10, 20 --> false
+function isTriangle(num1, num2, num3) {
+    return num1 + num2 > num3 && num1 + num3 > num2 && num2 + num3 > num1 ? true : false
+}
+
+console.log(isTriangle(10, 20, 29))
+console.log(isTriangle(10, 20, 31))
+console.log(isTriangle(31, 10, 20))
+console.log(isTriangle(100, 15, 16))
