@@ -1,4 +1,7 @@
+
 // --------------- 2/9/21 ---------------
+
+
 let myObj = {
     name: 'Straw',
     color: 'red',
@@ -217,7 +220,7 @@ var testData = [
     "chpiqqnk",
     "mmubsxma",
     "bjbuxerx",
-    "ppikxcba",
+    "ppikxcra",
     "argnznvv",
     "upxrvrws",
     "cnutkqpc",
@@ -820,9 +823,7 @@ var testData = [
 console.log(repeaterCode(testData))
 
 function diffArray(arr1, arr2) {
-
     return arr1.concat(arr2).filter(num => !arr1.includes(num) || !arr2.includes(num))
-
 }
 
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])
+console.log(diffArray([1, 2, 3, 4, 6], [1, 2, 3, 4, 5]))
